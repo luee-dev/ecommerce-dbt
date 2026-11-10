@@ -151,7 +151,7 @@ These issues are resolved during the Silver transformation layer.
 
 # 🥉 Bronze Layer
 
-**Model:** `bronze.sql`
+**Model:** `bronze_ecommerce_sales.sql`
 
 Purpose:
 
@@ -170,7 +170,7 @@ The Bronze layer serves as the immutable source for downstream transformations.
 
 # 🥈 Silver Layer
 
-**Model:** `silver.sql`
+**Model:** `silver_ecommerce_sales.sql`
 
 The Silver layer improves data quality by applying business rules and standardization.
 
