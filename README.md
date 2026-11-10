@@ -88,18 +88,19 @@ This project demonstrates that complete ELT workflow.
 ├── data-source/
 │   └── sales-generation.py
 │
-├── models/
-│   ├── bronze/
-│   │   └── bronze_ecommerce_sales.sql
-│   │
-│   ├── silver/
-│   │   └── silver_ecommerce_sales.sql
-│   │
-│   └── gold/
-│       ├── dim_customer.sql
-│       ├── dim_product.sql
-│       └── fct_order.sql
+├── bronze/
+│   └── bronze_ecommerce_sales.sql
 │
+├── silver/
+│   └── silver_ecommerce_sales.sql
+│
+├── gold/
+│   ├── dim_customer.sql
+│   ├── dim_product.sql
+│   └── fct_order.sql
+│
+├── tests/
+├── dbt_project.yml
 ├── docker-compose.yml
 ├── Dockerfile
 └── README.md
