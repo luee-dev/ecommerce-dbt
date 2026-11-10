@@ -306,9 +306,9 @@ Analytics & Reporting
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ecommerce-data-engineering.git
+git clone https://github.com/yourusername/ecommerce-dbt.git
 
-cd ecommerce-data-engineering
+cd ecommerce-dbt
 ```
 
 ---
@@ -329,7 +329,7 @@ This starts:
 ## 3. Generate Synthetic Data
 
 ```bash
-python data-source/data-generator.py
+python data-source/sales-generator.py
 ```
 
 This creates:
@@ -383,9 +383,8 @@ docker exec -it dbt_core dbt test
     dim_customer                 dim_product
     ─────────────                ─────────────
     customer_id                  product_id
-    customer_name                product_category
-    country
-```
+    country                      product_category
+    ```
 
 ---
 
