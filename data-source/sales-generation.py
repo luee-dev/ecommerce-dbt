@@ -21,14 +21,14 @@ def data_generation():
     for i in range(NUMBER_OF_RECORDS):
         order_date = fake.date_between(start_date='-1y', end_date="today")
         quantity = random.randint(1, 5)
-        price = round(ramdom.uniform(10, 500), 2)
+        price = round(random.uniform(10, 500), 2)
 
         data.append({
             "transaction_id": f"T{i+1}",
             "order_date": order_date,
             "customer_id": f"C{random.randint(1, 300)}",
             "country": random.choice(countries),
-            "product_id": f"P{random.randint(1, 200}}",
+            "product_id": f"P{random.randint(1, 200)}",
             "product_category": random.choice(categories),
             "quantity": quantity,
             "price": price,
@@ -61,7 +61,7 @@ def inject_errors(df):
             df.at[row, "customer_id"] = None
         elif error_type == "negative_quantity":
             df.at[row, "quantity"] = -random.randint(1, 5)
-        elif error_type == "ivalid_price":
+        elif error_type == "invalid_price":
             df.at[row, "price"] = -random.randint(1, 100)
         elif error_type == "future_date":
             df.at[row, "order_date"] = datetime.now() + timedelta(days=30)
