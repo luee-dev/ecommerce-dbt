@@ -1,0 +1,24 @@
+name: ecommerce_dbt
+version: '1.0.0'
+config-version: 2
+
+profile: ecommerce_dbt
+
+model-paths:
+  - bronze
+  - silver
+  - gold
+
+test-paths:
+  - tests
+
+models:
+  ecommerce_dbt:
+    bronze:
+      +materialized: table
+
+    silver:
+      +materialized: table
+
+    gold:
+      +materialized: table
