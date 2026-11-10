@@ -20,8 +20,9 @@ services:
     build: .
     container_name: dbt_core
     volumes:
-      - ./dbt_project:/usr/app
-      - ./dbt_project/.dbt:/root/.dbt
+      - .:/usr/app
+      - ./profiles.yml:root/.dbt/profiles.yml
+    working_dir: /usr/app
     depends_on:
       - postgres
     networks:
